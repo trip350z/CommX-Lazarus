@@ -10,7 +10,7 @@ The public API is inspired by **CommX 1.05**, by **エックス (KYY06770)**, da
 - Files: `vendor/synapse/synaser.pas`, `synafpc.pas`, `synautil.pas`
 - Copyright: Lukas Gebauer and the contributors identified in each file.
 - Terms: the BSD-style redistribution notices and disclaimers embedded in the source files. A copy of those notices is collected in [LICENSES/Synapse.txt](LICENSES/Synapse.txt).
-- Local patch: POSIX `fpOpen` adds `O_NONBLOCK` to avoid waiting for carrier detect before serial configuration. The original notices remain intact.
+- Local patches: POSIX `fpOpen` adds `O_NONBLOCK` to avoid waiting for carrier detect before serial configuration; Darwin `Purge` calls `TCFlush` instead of using the flush selector as an ioctl request. The original notices remain intact.
 - Provenance and byte hashes: [UPSTREAM.txt](vendor/synapse/UPSTREAM.txt).
 
 Preserve the upstream notices and include them in documentation accompanying binary distributions, as required by those notices.

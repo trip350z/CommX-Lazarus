@@ -16,7 +16,7 @@ WindowsではPowerShellから `./build.ps1 -WidgetSet win32` でも一式をビ�
 
 IDEへの登録なしでも使えます。CommXフォルダーとvendor/synapseをプロジェクトのユニット検索パスに、vendor/synapseをインクルード検索パスに追加してください。
 DCUは流用せずPASからビルドします。DCRのアイコンは使用していません。
-同梱SynaSerのソース・ライセンス表記はvendor/synapse内に保持し、取得元とSHA-256をUPSTREAM.txtに記録しています。POSIXでオープン時のキャリア待ちを防ぐため、SynaSerのfpOpenにO_NONBLOCKを追加する最小修正を加えています。
+同梱SynaSerのソース・ライセンス表記はvendor/synapse内に保持し、取得元とSHA-256をUPSTREAM.txtに記録しています。SynaSerには、POSIXのオープン時のキャリア待ちを防ぐO_NONBLOCK指定と、Darwinのバッファ消去をTCFlushで行う修正を加えています。
 
 ## OS別のポート指定
 

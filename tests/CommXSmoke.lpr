@@ -49,6 +49,7 @@ var
   I: Integer;
   Raised: Boolean;
 begin
+  try
   Application.Initialize;
   A := TCommX.Create(nil);
   B := TCommX.Create(nil);
@@ -91,5 +92,12 @@ begin
     Trace('Closing test ports');
     B.Free;
     A.Free;
+  end;
+  except
+    on E: Exception do begin
+      WriteLn(StdErr, 'FAIL: ', E.ClassName, ': ', E.Message);
+      Flush(StdErr);
+      Halt(1); // Avoid an unattended Cocoa/LCL exception dialog in CI.
+    end;
   end;
 end.

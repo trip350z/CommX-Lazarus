@@ -1,11 +1,12 @@
 SynaSer / Synapse upstream: https://github.com/geby/synapse
 Retrieved: 2026-11-02 from master (not an immutable version reference).
 Embedded license notices are preserved.
-Local patch in synaser.pas: add O_NONBLOCK to the FPC POSIX fpOpen call.
-This avoids blocking on carrier detect before CommX can configure CLOCAL.
+Local patches in synaser.pas:
+1. Add O_NONBLOCK to FPC POSIX fpOpen to avoid carrier-wait before CLOCAL.
+2. Use TCFlush on Darwin in Purge; TCIOFLUSH is a selector, not an ioctl request.
 SHA-256 of the bundled bytes:
 
 62cf9591499e18d6b41bd396765699fde899c019bd303092b6ea93ce0a8bfe49  jedi.inc
 4ff3caeca20f30e588014c6075c65e796bee5adbe5912548c11feb3ba6ae6dba  synafpc.pas
-a76be2404bbd28076e7ad2d259fc45882d8192815c821b34ff9912e9059ad454  synaser.pas
+15e56301fa4d18ef56e5c7db52ea50cc346977e7996cdb0129f1d3c5b81d8085  synaser.pas
 e55217cf8d1d967cacb0f2c5ecf08ff998f3c748f97e0a28d5a8b9f6a8d65194  synautil.pas
