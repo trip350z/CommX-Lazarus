@@ -1,0 +1,13 @@
+* text=auto eol=lf
+*.pas text eol=lf
+*.lpr text eol=lf
+*.lpi text eol=lf
+*.lpk text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=lf
+
+# Preserve bundled upstream bytes so UPSTREAM.txt hashes remain reproducible.
+vendor/synapse/** -text

@@ -1,0 +1,21 @@
+name: Bug report / 不具合報告
+description: Report a reproducible problem with CommX for Lazarus
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 環境
+      description: OS/CPU, Lazarus/FPC, widget set, adapter/driver, serial settings
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps and expected/actual behavior / 再現手順・期待結果・実際の結果
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs and PTY test result / ログ・PTYテスト結果
+      description: Remove private payloads and credentials before posting.

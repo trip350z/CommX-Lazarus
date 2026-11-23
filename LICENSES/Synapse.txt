@@ -1,0 +1,145 @@
+synaser.pas
+===========
+{==============================================================================|
+| Project : Ararat Synapse                                       | 007.008.000 |
+|==============================================================================|
+| Content: Serial port support                                                 |
+|==============================================================================|
+| Copyright (c)2001-2026, Lukas Gebauer                                        |
+| All rights reserved.                                                         |
+|                                                                              |
+| Redistribution and use in source and binary forms, with or without           |
+| modification, are permitted provided that the following conditions are met:  |
+|                                                                              |
+| Redistributions of source code must retain the above copyright notice, this  |
+| list of conditions and the following disclaimer.                             |
+|                                                                              |
+| Redistributions in binary form must reproduce the above copyright notice,    |
+| this list of conditions and the following disclaimer in the documentation    |
+| and/or other materials provided with the distribution.                       |
+|                                                                              |
+| Neither the name of Lukas Gebauer nor the names of its contributors may      |
+| be used to endorse or promote products derived from this software without    |
+| specific prior written permission.                                           |
+|                                                                              |
+| THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"  |
+| AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE    |
+| IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE   |
+| ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR  |
+| ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL       |
+| DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR   |
+| SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER   |
+| CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT           |
+| LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY    |
+| OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH  |
+| DAMAGE.                                                                      |
+|==============================================================================|
+| The Initial Developer of the Original Code is Lukas Gebauer (Czech Republic).|
+| Portions created by Lukas Gebauer are Copyright (c)2001-2026.                |
+| All Rights Reserved.                                                         |
+|==============================================================================|
+| Contributor(s):                                                              |
+|  (c)2002, Hans-Georg Joepgen (cpom Comport Ownership Manager and bugfixes)   |
+|==============================================================================|
+| History: see HISTORY.HTM from distribution package                           |
+|          (Found at URL: http://www.ararat.cz/synapse/)                       |
+|==============================================================================}
+
+synafpc.pas
+===========
+{==============================================================================|
+| Project : Ararat Synapse                                       | 001.004.000 |
+|==============================================================================|
+| Content: Utils for FreePascal compatibility                                  |
+|==============================================================================|
+| Copyright (c)1999-2022, Lukas Gebauer                                        |
+| All rights reserved.                                                         |
+|                                                                              |
+| Redistribution and use in source and binary forms, with or without           |
+| modification, are permitted provided that the following conditions are met:  |
+|                                                                              |
+| Redistributions of source code must retain the above copyright notice, this  |
+| list of conditions and the following disclaimer.                             |
+|                                                                              |
+| Redistributions in binary form must reproduce the above copyright notice,    |
+| this list of conditions and the following disclaimer in the documentation    |
+| and/or other materials provided with the distribution.                       |
+|                                                                              |
+| Neither the name of Lukas Gebauer nor the names of its contributors may      |
+| be used to endorse or promote products derived from this software without    |
+| specific prior written permission.                                           |
+|                                                                              |
+| THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"  |
+| AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE    |
+| IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE   |
+| ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR  |
+| ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL       |
+| DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR   |
+| SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER   |
+| CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT           |
+| LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY    |
+| OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH  |
+| DAMAGE.                                                                      |
+|==============================================================================|
+| The Initial Developer of the Original Code is Lukas Gebauer (Czech Republic).|
+| Portions created by Lukas Gebauer are Copyright (c)2003-2013.                |
+| All Rights Reserved.                                                         |
+|==============================================================================|
+| Contributor(s):                                                              |
+|   Tomas Hajny (OS2 support)                                                  |
+|   Projeto ACBr                                                               |
+|==============================================================================|
+| History: see HISTORY.HTM from distribution package                           |
+|          (Found at URL: http://www.ararat.cz/synapse/)                       |
+|==============================================================================}
+
+synautil.pas
+============
+{==============================================================================|
+| Project : Ararat Synapse                                       | 004.016.002 |
+|==============================================================================|
+| Content: support procedures and functions                                    |
+|==============================================================================|
+| Copyright (c)1999-2024, Lukas Gebauer                                        |
+| All rights reserved.                                                         |
+|                                                                              |
+| Redistribution and use in source and binary forms, with or without           |
+| modification, are permitted provided that the following conditions are met:  |
+|                                                                              |
+| Redistributions of source code must retain the above copyright notice, this  |
+| list of conditions and the following disclaimer.                             |
+|                                                                              |
+| Redistributions in binary form must reproduce the above copyright notice,    |
+| this list of conditions and the following disclaimer in the documentation    |
+| and/or other materials provided with the distribution.                       |
+|                                                                              |
+| Neither the name of Lukas Gebauer nor the names of its contributors may      |
+| be used to endorse or promote products derived from this software without    |
+| specific prior written permission.                                           |
+|                                                                              |
+| THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"  |
+| AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE    |
+| IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE   |
+| ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR  |
+| ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL       |
+| DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR   |
+| SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER   |
+| CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT           |
+| LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY    |
+| OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH  |
+| DAMAGE.                                                                      |
+|==============================================================================|
+| The Initial Developer of the Original Code is Lukas Gebauer (Czech Republic).|
+| Portions created by Lukas Gebauer are Copyright (c) 1999-2024.               |
+| Portions created by Hernan Sanchez are Copyright (c) 2000.                   |
+| Portions created by Petr Fejfar are Copyright (c)2011-2012.                  |
+| All Rights Reserved.                                                         |
+|==============================================================================|
+| Contributor(s):                                                              |
+|   Hernan Sanchez (hernan.sanchez@iname.com)                                  |
+|   Tomas Hajny (OS2 support)                                                  |
+|   Radek Cervinka (POSIX support)                                             |
+|==============================================================================|
+| History: see HISTORY.HTM from distribution package                           |
+|          (Found at URL: http://www.ararat.cz/synapse/)                       |
+|==============================================================================}

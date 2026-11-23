@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG><Package Version="5">
+<Name Value="CommXLCL"/><Type Value="RunAndDesignTime"/>
+<Description Value="CommX serial component for Lazarus LCL, SynaSer backend"/>
+<CompilerOptions><Version Value="11"/><SearchPaths>
+<OtherUnitFiles Value="vendor/synapse"/><IncludeFiles Value="vendor/synapse"/>
+<UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)/$(LCLWidgetType)"/>
+</SearchPaths></CompilerOptions>
+<Files Count="1"><Item1><Filename Value="CommX.pas"/><HasRegisterProc Value="True"/><UnitName Value="CommX"/></Item1></Files>
+<RequiredPkgs Count="1"><Item1><PackageName Value="LCL"/></Item1></RequiredPkgs>
+<UsageOptions><UnitPath Value="$(PkgOutDir)"/></UsageOptions>
+</Package></CONFIG>
