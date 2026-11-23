@@ -10,12 +10,12 @@ This is a new LCL compatibility implementation inspired by CommX 1.05 by エッ�
 
 | Platform | Widget set | Project | Validation |
 | --- | --- | --- | --- |
-| Windows x64 | `win32` | `demo/CommXDemo.lpi` | Local package/demo builds and lifecycle tests passed |
-| Linux x64 | `gtk2` (also targets Qt5/Qt6) | `demo/CommXDemo.lpi` | CI builds and PTY tests configured |
-| macOS Intel | `cocoa` | `demo/CommXDemoMac.lpi` | CI builds and PTY tests configured |
+| Windows x64 | `win32` | `demo/CommXDemo.lpi` | CI package/demo builds and lifecycle tests passed |
+| Linux x64 | `gtk2` (also targets Qt5/Qt6) | `demo/CommXDemo.lpi` | CI builds, lifecycle, and PTY binary-transfer tests passed |
+| macOS Intel | `cocoa` | `demo/CommXDemoMac.lpi` | CI builds, lifecycle, and PTY binary-transfer tests passed |
 | macOS Apple Silicon | `cocoa` | `demo/CommXDemoMac.lpi` | Targeted by source; not yet validated |
 
-The Actions results report the latest automated validation. PTYs test byte transport, not physical modem lines, USB timing, parity errors, or real hardware. Qt5/Qt6 and IDE installation are not covered by the workflow.
+Windows x64, Linux GTK2, and macOS Intel Cocoa passed [the publication-validation run](https://github.com/trip350z/CommX-Lazarus/actions/runs/45103206975) on 2026-11-23. The Actions results report subsequent automated validation. PTYs test byte transport, not physical modem lines, USB timing, parity errors, or real hardware. Qt5/Qt6 and IDE installation are not covered by the workflow.
 
 ## Install
 

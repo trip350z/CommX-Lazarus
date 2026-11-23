@@ -3,7 +3,7 @@
 [English](README.md) · [GitHub](https://github.com/trip350z/CommX-Lazarus) · [ビルド状況](https://github.com/trip350z/CommX-Lazarus/actions/workflows/build.yml)
 
 Delphi用CommX 1.05（原作者: エックス / KYY06770）のAPIに合わせて新たに実装したLCL互換コンポーネントです。通信処理はSynaSerを使用します。旧Delphi版のPAS / DCU / DCRはこのリポジトリに含めません。
-Windows・Linux・macOSでビルドするソース構成を用意しています。CIではWindows x64、Linux GTK2、macOS Intel Cocoaのビルドとテストを実行します。実機通信とApple Siliconでの検証状況は別です。最新の結果は上の「ビルド状況」を確認してください。
+Windows・Linux・macOSでビルドするソース構成を用意しています。CIではWindows x64、Linux GTK2、macOS Intel Cocoaのビルドと基本テスト、およびLinux/macOSのPTY双方向バイナリ転送・再オープン試験が通過しています。実機通信とApple Siliconでの検証状況は別です。最新の結果は上の「ビルド状況」を確認してください。
 
 ## インストール
 
@@ -121,7 +121,7 @@ lazbuildがPATHにない場合はLazarusのインストール先をPATHに追加
 Windows x64 / Free Pascal 3.2.2で、LazarusパッケージとGUIサンプル・テストのコンパイルを実施しています。
 実ポートを使わないテスト（生成・破棄、閉じたポートでの操作、存在しないデバイスへの接続失敗を繰り返した後の後始末）はPASSです。
 同梱SynaSerには既存の非推奨シンボル警告が3件あります。
-公開準備時点のローカル検証はWindowsです。Linux・macOSはGitHub Actionsで検証します。IDEへのインストールと実機シリアル通信は未検証です。CIのPTY試験は物理RTS/DTRやUSBタイミングを保証するものではありません。
+2026-11-23の[GitHub Actions検証](https://github.com/trip350z/CommX-Lazarus/actions/runs/45103206975)で、Windows x64、Linux GTK2、macOS Intel Cocoaがすべて通過しました。Linux/macOSではPTY対による全256種類のバイト値の双方向転送と再オープンも成功しています。IDEへのインストールと実機シリアル通信は未検証です。CIのPTY試験は物理RTS/DTRやUSBタイミングを保証するものではありません。
 
 テストはtests/CommXSmoke.lpiからビルドできます。引数なしでは実在するポートに接続しません。
 2つの引数に接続済みのポート対を指定すると、全256バイト値の双方向転送と再オープンも検証します。
