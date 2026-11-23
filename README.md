@@ -49,6 +49,8 @@ On Windows, use Lazarus or PowerShell:
 ./tests/CommXSmoke.exe
 ```
 
+On Ubuntu/Debian, include `fp-units-misc` with Lazarus/LCL; the clipboard units need its CHM parser even in a serial-only application.
+
 Put `lazbuild` on PATH, or pass `-LazBuild 'E:\path\to\lazbuild.exe'` to `build.ps1`. Build outputs are separated by CPU, OS, and widget set. These commands are native builds, not cross-compiler installers.
 
 The demo opens a device **only when Open is clicked**, and sends only when Send is clicked. Defaults: **9600 baud, 8N1, no flow control**. Receive data is displayed as hex.

@@ -23,7 +23,7 @@ jobs:
       - name: Install Lazarus and test dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends lazarus lcl-gtk2 xvfb xauth socat
+          sudo apt-get install -y --no-install-recommends lazarus lcl-gtk2 fp-units-misc xvfb xauth socat
       - name: Build package, demo, and smoke test
         run: sh build.sh gtk2
       - name: Lifecycle test

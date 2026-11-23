@@ -2,7 +2,13 @@ program CommXSmoke;
 {$mode objfpc}{$H+}
 uses
   {$IFDEF UNIX}cthreads,{$ENDIF}
-  Interfaces, Forms, SysUtils, CommX;
+  Interfaces, Forms, Classes, SysUtils, CommX;
+
+procedure Trace(const MessageText: string);
+begin
+  WriteLn(MessageText);
+  Flush(Output);
+end;
 
 procedure Check(Value: Boolean; const MessageText: string);
 begin
@@ -23,7 +29,9 @@ begin
   Received := '';
   Started := GetTickCount64;
   repeat
-    Application.ProcessMessages;
+    // This test polls byte queues; Cocoa GUI event dispatch needs a running
+    // application and is not needed for the transport test.
+    CheckSynchronize(0);
     N := B.ReceiveBlock(@Buffer[0], SizeOf(Buffer));
     if N > 0 then begin
       I := Length(Received);
@@ -61,10 +69,15 @@ begin
       A.DeviceName := ParamStr(1);
       B.DeviceName := ParamStr(2);
       B.FlowCtrl := cfcNone;
+      Trace('Opening test port A');
       A.PortOpen;
+      Trace('Opening test port B');
       B.PortOpen;
+      Trace('Transferring A -> B');
       Transfer(A, B);
+      Trace('Transferring B -> A');
       Transfer(B, A);
+      Trace('Clearing and reopening test port A');
       A.ClearReceiveBuf;
       A.ClearTransBuf;
       A.PortClose;
@@ -75,6 +88,7 @@ begin
       {$IFDEF MSWINDOWS}' (Windows)'{$ELSE}' (POSIX)'{$ENDIF});
     if ParamCount = 2 then WriteLn('PASS: bidirectional binary transfer and reopen');
   finally
+    Trace('Closing test ports');
     B.Free;
     A.Free;
   end;
